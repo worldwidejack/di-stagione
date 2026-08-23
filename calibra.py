@@ -27,6 +27,7 @@ import time
 import urllib.error
 import urllib.request
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 QUI = Path(__file__).parent
@@ -35,7 +36,7 @@ BASE = ("https://osservaprezzi.mise.gov.it/prezzi/livelli/"
 UA = "di-stagione/1.0 (progetto personale non commerciale; calendario di stagionalita)"
 
 ANNI_DEFAULT = [2021, 2022, 2023, 2024, 2025, 2026]
-SETTIMANE = [1, 3]
+SETTIMANE = [1, 2, 3, 4, 5]
 GRUPPI = ["FRUTTA", "ORTAGGI", "AGRUMI"]
 # Un mercato per area. Milano indica spesso la regione d'origine, Genova quasi mai:
 # per questo il segnale principale e' "origine italiana", non "origine regionale".
@@ -106,39 +107,56 @@ def italiana(origine):
     return o == "ITALIA" or o in REGIONI
 
 
-def raccogli(anni):
-    """Restituisce due strutture:
-       visto[(area, mese, anno)]            -> True se quel listino aveva righe
-       trovato[(id, area, mese, anno)]      -> insieme di (varieta, origine) italiane
-    """
-    visto = set()
-    trovato = defaultdict(set)
+def raccogli(anni, lavoratori=4):
+    """Ogni (anno, mese, settimana, mercato) e' UN CAMPIONE: il primo listino di
+    quella settimana. Contiamo in quanti campioni un prodotto compare con origine
+    italiana. Un solo campione non fa una stagione: serve la frequenza."""
+    campioni = defaultdict(int)          # (area, mese) -> quanti listini non vuoti
+    presenze = defaultdict(int)          # (id, area, mese) -> in quanti compare
+    righe_tot = defaultdict(int)         # (id, area, mese) -> righe italiane totali
     ignorate = defaultdict(int)
-    totale = len(anni) * 12 * len(SETTIMANE) * len(MERCATI) * len(GRUPPI)
-    fatte = 0
 
-    for anno in anni:
-        for mese in range(1, 13):
-            for settimana in SETTIMANE:
-                for mercato, area in MERCATI.items():
-                    for gruppo in GRUPPI:
-                        html = scarica(anno, mese, settimana, mercato, gruppo)
-                        fatte += 1
-                        if fatte % 50 == 0:
-                            print(f"  {fatte}/{totale} pagine…", flush=True)
-                        for c in righe(html):
-                            visto.add((area, mese, anno))
-                            specie = c["Specie"].upper()
-                            pid = SPECIE_A_ID.get(specie)
-                            if pid is None:
-                                ignorate[specie] += 1
-                                continue
-                            if italiana(c.get("Origine")):
-                                trovato[(pid, area, mese, anno)].add(
-                                    (c.get("Varietà", ""), c.get("Origine", ""))
-                                )
-                        time.sleep(0.35)   # gentile col server del Ministero
-    return visto, trovato, ignorate
+    lavori = [(a, m, s_, mk, g)
+              for a in anni for m in range(1, 13) for s_ in SETTIMANE
+              for mk in MERCATI for g in GRUPPI]
+    print(f"  {len(lavori)} pagine da interrogare…", flush=True)
+
+    def una(job):
+        anno, mese, sett, mercato, gruppo = job
+        return job, scarica(anno, mese, sett, mercato, gruppo)
+
+    fatte = 0
+    visti_campione = set()
+    with ThreadPoolExecutor(max_workers=lavoratori) as pool:
+        for (anno, mese, sett, mercato, gruppo), html in pool.map(una, lavori):
+            fatte += 1
+            if fatte % 200 == 0:
+                print(f"  {fatte}/{len(lavori)}…", flush=True)
+            area = MERCATI[mercato]
+            trovati_qui = set()
+            vuoto = True
+            for c in righe(html):
+                vuoto = False
+                specie = c["Specie"].upper()
+                pid = SPECIE_A_ID.get(specie)
+                if pid is None:
+                    ignorate[specie] += 1
+                    continue
+                if italiana(c.get("Origine")):
+                    trovati_qui.add(pid)
+                    righe_tot[(pid, area, mese)] += 1
+            if vuoto:
+                continue
+            # il campione e' (anno, mese, settimana, mercato): i gruppi sono pagine
+            # diverse dello stesso listino, non campioni distinti
+            chiave = (anno, mese, sett, mercato)
+            if chiave not in visti_campione:
+                visti_campione.add(chiave)
+                campioni[(area, mese)] += 1
+            for pid in trovati_qui:
+                presenze[(pid, area, mese)] += 1
+
+    return campioni, presenze, righe_tot, ignorate
 
 
 def finestra(mesi_validi):
@@ -161,56 +179,57 @@ def finestra(mesi_validi):
     return migliore[1]
 
 
-def calcola(visto, trovato, soglia=0.5):
-    aree = sorted({a for (_, a, _, _) in trovato} | {a for (a, _, _) in visto})
-    prodotti = sorted({p for (p, _, _, _) in trovato})
+def calcola(campioni, presenze, righe_tot, soglia=0.35):
+    aree = sorted({a for (a, _) in campioni})
+    prodotti = sorted({p for (p, _, _) in presenze})
     esito = {}
     for pid in prodotti:
         for area in aree:
             quota, abbondanza = {}, {}
             for mese in range(1, 13):
-                anni_visti = {y for (a, m, y) in visto if a == area and m == mese}
-                if not anni_visti:
+                n = campioni.get((area, mese), 0)
+                if n < 3:                       # troppo pochi listini: non giudichiamo
                     continue
-                anni_ok = {y for y in anni_visti if trovato.get((pid, area, mese, y))}
-                quota[mese] = len(anni_ok) / len(anni_visti)
-                abbondanza[mese] = (
-                    sum(len(trovato.get((pid, area, mese, y), ())) for y in anni_visti)
-                    / len(anni_visti)
-                )
+                quota[mese] = presenze.get((pid, area, mese), 0) / n
+                abbondanza[mese] = righe_tot.get((pid, area, mese), 0) / n
+            if len(quota) < 8:                  # copertura dell'anno insufficiente
+                continue
             mesi_ok = {m for m, q in quota.items() if q >= soglia}
+            # un mese sotto soglia stretto fra due mesi sopra soglia e' un buco di
+            # campionamento, non una pausa della stagione: lo richiudiamo
+            for m in range(1, 13):
+                prima, dopo = (m - 2) % 12 + 1, m % 12 + 1
+                if m not in mesi_ok and prima in mesi_ok and dopo in mesi_ok:
+                    mesi_ok.add(m)
             f = finestra(mesi_ok)
             if not f:
                 continue
             inizio, fine = f
-            dentro = []
-            m = inizio
+            dentro, m = [], inizio
             while True:
                 dentro.append(m)
                 if m == fine:
                     break
                 m = m % 12 + 1
             picco = max(dentro, key=lambda x: abbondanza.get(x, 0))
-            esito[(pid, area)] = {
-                "mese_inizio": inizio, "mese_fine": fine, "picco": picco,
-                "quota": quota, "abbondanza": abbondanza,
-            }
+            esito[(pid, area)] = {"mese_inizio": inizio, "mese_fine": fine,
+                                  "picco": picco, "quota": quota,
+                                  "abbondanza": abbondanza}
     return esito
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--anni", nargs="*", type=int, default=ANNI_DEFAULT)
-    ap.add_argument("--soglia", type=float, default=0.5,
-                    help="quota minima di anni in cui il prodotto dev'essere quotato")
+    ap.add_argument("--soglia", type=float, default=0.35,
+                    help="quota minima di listini in cui il prodotto dev'essere quotato")
     args = ap.parse_args()
 
     print(f"Scarico i listini per gli anni {args.anni}…", flush=True)
-    visto, trovato, ignorate = raccogli(args.anni)
-    print(f"Listini con dati: {len(visto)} | prodotti riconosciuti: "
-          f"{len({p for (p, _, _, _) in trovato})}", flush=True)
-
-    esito = calcola(visto, trovato, args.soglia)
+    campioni, presenze, righe_tot, ignorate = raccogli(args.anni)
+    print(f"Listini non vuoti: {sum(campioni.values())} | prodotti riconosciuti: "
+          f"{len({p for (p, _, _) in presenze})}", flush=True)
+    esito = calcola(campioni, presenze, righe_tot, args.soglia)
 
     # dataset in uso, per il confronto
     attuale = json.loads((QUI / "dati" / "stagionalita.json").read_text("utf-8"))
@@ -236,11 +255,12 @@ def main():
         json.dumps(proposta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     # 2) il referto leggibile
-    barra = lambda q: "".join("█" if q.get(m, 0) >= .8 else
-                              "▓" if q.get(m, 0) >= .5 else
-                              "░" if q.get(m, 0) > 0 else "·" for m in range(1, 13))
+    barra = lambda q: "".join("█" if q.get(m, 0) >= .7 else
+                              "▓" if q.get(m, 0) >= .35 else
+                              "░" if q.get(m, 0) > 0.05 else "·" for m in range(1, 13))
     out = ["# Referto di calibrazione", "",
-           f"Anni analizzati: {args.anni} — soglia: {args.soglia:.0%} degli anni.", "",
+           f"Anni analizzati: {args.anni} — soglia: {args.soglia:.0%} dei listini.", "",
+           f"Listini campionati: {sum(campioni.values())}.", "",
            "La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre, ",
            "`▓` spesso, `░` raramente, `·` mai (con origine italiana).", ""]
     for area, titolo in (("nord_italia", "Nord Italia (mercato di Milano)"),
