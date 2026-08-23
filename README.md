@@ -50,6 +50,20 @@ python3 genera.py --data 2026-12-01
 Riscrive `index.html` come se fosse quel giorno. Ricordati di rilanciare
 `python3 genera.py` senza `--data` prima di committare.
 
+## Da dove vengono i mesi (leggi questo)
+
+I mesi nel calendario sono **indicativi**, non verità assoluta. In Italia non
+esiste un calendario ufficiale della stagionalità: ogni fonte dice cose
+leggermente diverse, e nessuna di quelle consultate distingue il Nord dalla
+Liguria. I valori qui dentro sono una sintesi di più calendari incrociati, con
+la Liguria anticipata di 2-4 settimane sulle colture primaverili ed estive
+perché il clima costiero è più mite.
+
+Questo vuol dire che **la fonte più affidabile siete voi**. Se a Lerici le
+nespole arrivano tre settimane prima di quanto dice il sito, il sito ha torto:
+si apre `dati/stagionalita.json` e si corregge quel numero. Il progetto è fatto
+per diventare più giusto col tempo, non per essere perfetto oggi.
+
 ## Cosa NON c'è (e non è una dimenticanza)
 
 Niente database, niente notifiche push, niente login, niente dati nutrizionali.

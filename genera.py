@@ -64,6 +64,20 @@ def stato(prodotto: dict, area: str, mese: int):
     return None
 
 
+def mese_prossimo(mese: int) -> int:
+    return mese % 12 + 1
+
+
+def in_arrivo(prodotto: dict, area: str, mese: int) -> bool:
+    """True se il prodotto NON e' di stagione adesso ma parte il mese prossimo."""
+    if stato(prodotto, area, mese) is not None:
+        return False
+    for s in prodotto.get("stagione", []):
+        if s.get("area") == area and s["mese_inizio"] == mese_prossimo(mese):
+            return True
+    return False
+
+
 def frase(prodotto: dict, area: str, chiave: str) -> str:
     return prodotto.get(chiave, "").replace("{luogo}", LUOGO[area])
 
@@ -83,6 +97,15 @@ def card(prodotto: dict, st: dict) -> str:
         f'<span class="emoji">{prodotto["emoji"]}</span>'
         f'<span><span class="nome">{prodotto["nome"]}</span>{badge}</span>'
         f"</div>"
+    )
+
+
+def card_arrivo(prodotto: dict) -> str:
+    return (
+        '<div class="card arrivo">'
+        f'<span class="emoji">{prodotto["emoji"]}</span>'
+        f'<span><span class="nome">{prodotto["nome"]}</span></span>'
+        "</div>"
     )
 
 
@@ -108,8 +131,20 @@ def sezione_area(dati: dict, area: str, mese: int) -> str:
     for gruppo in (novita, picco, resto):
         gruppo.sort(key=lambda x: (x[0]["categoria"], x[0]["nome"]))
 
+    arrivo = sorted(
+        [p for p in dati["prodotti"] if in_arrivo(p, area, mese)],
+        key=lambda p: (p["categoria"], p["nome"]),
+    )
+    coda = ""
+    if arrivo:
+        celle = "".join(card_arrivo(p) for p in arrivo)
+        coda = (
+            f'<p class="gruppo-titolo">Sta per arrivare &middot; {MESI[mese_prossimo(mese)]}</p>'
+            f'<div class="griglia arrivi">{celle}</div>'
+        )
+
     if not (novita or picco or resto):
-        return '<p class="vuoto">Questo mese qui non entra niente di nuovo. Succede.</p>'
+        return '<p class="vuoto">Questo mese qui non entra niente di nuovo. Succede.</p>' + coda
 
     pezzi = []
     if novita:
@@ -118,6 +153,7 @@ def sezione_area(dati: dict, area: str, mese: int) -> str:
         pezzi.append(f'<p class="gruppo-titolo">Al picco</p>{griglia(picco)}')
     if resto:
         pezzi.append(f'<p class="gruppo-titolo">Anche di stagione</p>{griglia(resto)}')
+    pezzi.append(coda)
     return "".join(pezzi)
 
 
@@ -130,7 +166,8 @@ def blocco_novita(dati: dict, mese: int) -> str:
             if st and st["novita"]:
                 righe.append(f'<p class="frase">{frase(p, area, "frase_inizio")}</p>')
                 break  # una riga per prodotto, il Nord ha la precedenza
-    return "".join(righe)
+    # al massimo tre frasi in cima: il resto si vede comunque nelle schede
+    return "".join(righe[:3])
 
 
 def genera(giorno: date) -> str:
