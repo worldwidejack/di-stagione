@@ -1,0 +1,45 @@
+name: Ricalibra il calendario
+
+# Questo lavoro NON pubblica il sito. Scarica i listini dei mercati e scrive due
+# file di proposta che poi un umano guarda. Se fallisce, il sito non se ne accorge.
+
+on:
+  schedule:
+    - cron: "0 4 3 * *"     # il 3 di ogni mese, alle 4:00 UTC
+  workflow_dispatch:
+    inputs:
+      anni:
+        description: "Anni da analizzare, separati da spazio (vuoto = tutti)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  calibra:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Scarica il repo
+        uses: actions/checkout@v4
+
+      - name: Interroga i listini e calcola
+        run: |
+          if [ -n "${{ github.event.inputs.anni }}" ]; then
+            python3 calibra.py --anni ${{ github.event.inputs.anni }}
+          else
+            python3 calibra.py
+          fi
+
+      - name: Committa la proposta
+        run: |
+          git config user.name "Di Stagione bot"
+          git config user.email "actions@github.com"
+          git add dati/stagionalita_calcolata.json dati/calibrazione.md
+          if git diff --cached --quiet; then
+            echo "La calibrazione non ha cambiato niente."
+          else
+            git commit -m "Calibrazione dai listini del $(TZ=Europe/Rome date +%d/%m/%Y)"
+            git push
+          fi
