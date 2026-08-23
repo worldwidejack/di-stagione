@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Di Stagione</title>
+<meta name="description" content="Cosa è di stagione oggi in Nord Italia e in Liguria.">
+<meta name="theme-color" content="#f7f2e8">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍑</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f2e8; --card:#fffdf8; --ink:#2b2118; --muted:#8a7a66;
+    --line:#e5dbc9; --accent:#c2410c; --accent-soft:#fde9d7; --peak:#166534; --peak-soft:#dcfce7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#191510; --card:#241e17; --ink:#f2e9dc; --muted:#a08f79;
+      --line:#3a3026; --accent:#fb923c; --accent-soft:#40200e; --peak:#86efac; --peak-soft:#14301f;
+    }
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.5;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:40px 20px 64px}
+  header{margin-bottom:28px}
+  h1{
+    font-family:"Fraunces",Georgia,serif; font-weight:600;
+    font-size:clamp(38px,9vw,60px); line-height:1; letter-spacing:-.02em; margin:0 0 8px;
+  }
+  .data{color:var(--muted); font-size:15px; margin:0}
+  .stale{
+    display:none; margin-top:14px; padding:10px 14px; border-radius:10px;
+    background:var(--accent-soft); color:var(--accent); font-size:14px;
+  }
+  .tabs{display:flex; gap:6px; margin:26px 0 22px; border-bottom:1px solid var(--line)}
+  .tabs button{
+    appearance:none; border:0; background:none; cursor:pointer; font:inherit; font-size:16px;
+    color:var(--muted); padding:10px 4px; margin-right:22px; border-bottom:2px solid transparent;
+  }
+  .tabs button[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--accent)}
+  .gruppo-titolo{
+    font-size:12px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted);
+    margin:26px 0 12px; font-weight:600;
+  }
+  .gruppo-titolo:first-child{margin-top:0}
+  .griglia{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:14px;
+    padding:16px 14px; display:flex; align-items:center; gap:12px;
+  }
+  .card .emoji{font-size:30px; line-height:1; flex:none}
+  .card .nome{font-weight:600; font-size:16px}
+  .card .badge{font-size:12px; color:var(--muted); margin-top:2px; display:block}
+  .card.novita{border-color:var(--accent)}
+  .card.novita .badge{color:var(--accent); font-weight:600}
+  .card.picco .badge{color:var(--peak); font-weight:600}
+  .vuoto{color:var(--muted); font-style:italic; padding:20px 0}
+  .frase{
+    background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent);
+    border-radius:12px; padding:14px 16px; margin-bottom:10px; font-size:16px;
+  }
+  footer{margin-top:46px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+  footer code{font-size:12px; background:var(--card); padding:2px 6px; border-radius:5px; border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Di Stagione</h1>
+    <p class="data">{{DATA_LUNGA}}</p>
+    <div class="stale" id="stale">Questa pagina non si aggiorna da qualche giorno — potrebbe essere ferma.</div>
+  </header>
+
+  {{NOVITA}}
+
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="nord" id="tab-nord">Nord Italia</button>
+    <button role="tab" aria-selected="false" aria-controls="liguria" id="tab-liguria">Liguria</button>
+  </div>
+
+  <section id="nord" role="tabpanel" aria-labelledby="tab-nord">
+    {{NORD}}
+  </section>
+  <section id="liguria" role="tabpanel" aria-labelledby="tab-liguria" hidden>
+    {{LIGURIA}}
+  </section>
+
+  <footer>
+    Pagina rigenerata da sola ogni mattina.<br>
+    Ultimo aggiornamento: <code>{{GENERATO_LEGGIBILE}}</code>
+  </footer>
+</div>
+
+<script>
+  // Tab switch
+  const tabs = document.querySelectorAll('[role="tab"]');
+  tabs.forEach(t => t.addEventListener('click', () => {
+    tabs.forEach(o => {
+      const panel = document.getElementById(o.getAttribute('aria-controls'));
+      const on = o === t;
+      o.setAttribute('aria-selected', on);
+      panel.hidden = !on;
+    });
+  }));
+
+  // Controllo onestà: se la pagina è stata generata più di 2 giorni fa, lo diciamo.
+  const generato = new Date("{{GENERATO_ISO}}");
+  const giorni = (Date.now() - generato.getTime()) / 86400000;
+  if (giorni > 2) document.getElementById('stale').style.display = 'block';
+</script>
+</body>
+</html>
