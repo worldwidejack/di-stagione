@@ -1,0 +1,33 @@
+name: Aggiorna la pagina
+
+on:
+  schedule:
+    # 06:00 UTC = 08:00 in Italia d'estate, 07:00 d'inverno.
+    # I cron di GitHub Actions possono slittare di qualche minuto: va bene così.
+    - cron: "0 6 * * *"
+  workflow_dispatch:   # <- questo è il bottone "Run workflow" per lanciarlo a mano
+
+permissions:
+  contents: write      # serve per poter ricommittare index.html
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repo
+        uses: actions/checkout@v4
+
+      - name: Rigenera index.html
+        run: python3 genera.py
+
+      - name: Committa se è cambiato qualcosa
+        run: |
+          git config user.name "Di Stagione bot"
+          git config user.email "actions@github.com"
+          if git diff --quiet index.html; then
+            echo "Niente di nuovo oggi: index.html è già aggiornato."
+          else
+            git add index.html
+            git commit -m "Aggiornamento del $(TZ=Europe/Rome date +%d/%m/%Y)"
+            git push
+          fi
