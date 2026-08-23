@@ -57,9 +57,16 @@ def stato(prodotto: dict, area: str, mese: int):
             continue
         if not mese_dentro(s["mese_inizio"], s["mese_fine"], mese):
             continue
+        picco = s.get("picco")
+        # distanza dal picco misurata DENTRO la finestra di stagione,
+        # cosi' funziona anche per le stagioni che scavalcano l'anno (es. 10 -> 4)
+        dal_inizio = lambda x: (x - s["mese_inizio"]) % 12
+        delta = dal_inizio(picco) - dal_inizio(mese) if picco else 0
         return {
             "novita": mese == s["mese_inizio"],
-            "picco": mese == s.get("picco"),
+            "picco": mese == picco,
+            "delta_picco": delta,
+            "mese_picco": picco,
         }
     return None
 
@@ -91,6 +98,14 @@ def card(prodotto: dict, st: dict) -> str:
     elif st["picco"]:
         classi.append("picco")
         etichetta = "al picco"
+    else:
+        d = st.get("delta_picco", 0)
+        if d > 0:
+            classi.append("prima")
+            etichetta = f"picco a {MESI[st['mese_picco']]}"
+        elif d < 0:
+            classi.append("dopo")
+            etichetta = f"picco era a {MESI[st['mese_picco']]}"
     badge = f'<span class="badge">{etichetta}</span>' if etichetta else ""
     return (
         f'<div class="{" ".join(classi)}">'
