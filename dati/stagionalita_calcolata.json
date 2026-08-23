@@ -13,14 +13,14 @@
         {
           "area": "nord_italia",
           "mese_inizio": 10,
-          "mese_fine": 10,
-          "picco": 10
+          "mese_fine": 1,
+          "picco": 1
         },
         {
           "area": "liguria",
-          "mese_inizio": 12,
+          "mese_inizio": 10,
           "mese_fine": 1,
-          "picco": 12
+          "picco": 1
         }
       ]
     },
@@ -36,8 +36,8 @@
         {
           "area": "nord_italia",
           "mese_inizio": 5,
-          "mese_fine": 5,
-          "picco": 5
+          "mese_fine": 7,
+          "picco": 7
         },
         {
           "area": "liguria",
@@ -81,15 +81,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 2,
+          "mese_inizio": 12,
           "mese_fine": 3,
-          "picco": 2
+          "picco": 12
         },
         {
           "area": "liguria",
-          "mese_inizio": 2,
+          "mese_inizio": 12,
           "mese_fine": 3,
-          "picco": 2
+          "picco": 12
         }
       ]
     },
@@ -105,14 +105,14 @@
         {
           "area": "nord_italia",
           "mese_inizio": 2,
-          "mese_fine": 2,
-          "picco": 2
+          "mese_fine": 4,
+          "picco": 4
         },
         {
           "area": "liguria",
           "mese_inizio": 2,
-          "mese_fine": 2,
-          "picco": 2
+          "mese_fine": 4,
+          "picco": 4
         }
       ]
     },
@@ -127,13 +127,13 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 12,
+          "mese_inizio": 4,
           "mese_fine": 1,
           "picco": 12
         },
         {
           "area": "liguria",
-          "mese_inizio": 12,
+          "mese_inizio": 4,
           "mese_fine": 1,
           "picco": 12
         }
@@ -151,14 +151,14 @@
         {
           "area": "nord_italia",
           "mese_inizio": 7,
-          "mese_fine": 10,
-          "picco": 7
+          "mese_fine": 4,
+          "picco": 12
         },
         {
           "area": "liguria",
           "mese_inizio": 7,
-          "mese_fine": 10,
-          "picco": 7
+          "mese_fine": 4,
+          "picco": 4
         }
       ]
     },
@@ -173,9 +173,9 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 9,
+          "mese_inizio": 10,
           "mese_fine": 1,
-          "picco": 10
+          "picco": 12
         },
         {
           "area": "liguria",
@@ -221,13 +221,13 @@
           "area": "nord_italia",
           "mese_inizio": 11,
           "mese_fine": 4,
-          "picco": 3
+          "picco": 2
         },
         {
           "area": "liguria",
           "mese_inizio": 11,
           "mese_fine": 4,
-          "picco": 2
+          "picco": 1
         }
       ]
     },
@@ -243,37 +243,14 @@
         {
           "area": "nord_italia",
           "mese_inizio": 4,
-          "mese_fine": 6,
+          "mese_fine": 9,
           "picco": 4
         },
         {
           "area": "liguria",
           "mese_inizio": 4,
-          "mese_fine": 6,
+          "mese_fine": 9,
           "picco": 4
-        }
-      ]
-    },
-    {
-      "id": "castagne",
-      "nome": "Castagne",
-      "emoji": "🌰",
-      "categoria": "frutta",
-      "frase_inizio": "Castagne{luogo}: comincia la stagione, le prime sono piccole.",
-      "frase_picco": "Castagne al picco{luogo}: mese buono, quelle grosse valgono la spesa.",
-      "nutriente_eroe": "manganese",
-      "stagione": [
-        {
-          "area": "nord_italia",
-          "mese_inizio": 10,
-          "mese_fine": 10,
-          "picco": 10
-        },
-        {
-          "area": "liguria",
-          "mese_inizio": 10,
-          "mese_fine": 10,
-          "picco": 10
         }
       ]
     },
@@ -290,13 +267,13 @@
           "area": "nord_italia",
           "mese_inizio": 11,
           "mese_fine": 2,
-          "picco": 11
+          "picco": 12
         },
         {
           "area": "liguria",
           "mese_inizio": 11,
           "mese_fine": 2,
-          "picco": 1
+          "picco": 12
         }
       ]
     },
@@ -311,13 +288,13 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 12,
+          "mese_inizio": 9,
           "mese_fine": 2,
           "picco": 12
         },
         {
           "area": "liguria",
-          "mese_inizio": 12,
+          "mese_inizio": 9,
           "mese_fine": 2,
           "picco": 12
         }
@@ -334,15 +311,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 8,
+          "mese_inizio": 6,
           "mese_fine": 8,
-          "picco": 8
+          "picco": 6
         },
         {
           "area": "liguria",
-          "mese_inizio": 8,
+          "mese_inizio": 6,
           "mese_fine": 8,
-          "picco": 8
+          "picco": 6
         }
       ]
     },
@@ -357,15 +334,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 2,
-          "mese_fine": 3,
-          "picco": 2
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
         },
         {
           "area": "liguria",
-          "mese_inizio": 2,
-          "mese_fine": 3,
-          "picco": 3
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
         }
       ]
     },
@@ -386,9 +363,9 @@
         },
         {
           "area": "liguria",
-          "mese_inizio": 12,
-          "mese_fine": 1,
-          "picco": 12
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
         }
       ]
     },
@@ -403,13 +380,13 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 8,
+          "mese_inizio": 6,
           "mese_fine": 8,
           "picco": 8
         },
         {
           "area": "liguria",
-          "mese_inizio": 8,
+          "mese_inizio": 6,
           "mese_fine": 8,
           "picco": 8
         }
@@ -426,15 +403,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 6,
+          "mese_inizio": 3,
           "mese_fine": 8,
-          "picco": 6
+          "picco": 3
         },
         {
           "area": "liguria",
-          "mese_inizio": 6,
+          "mese_inizio": 3,
           "mese_fine": 8,
-          "picco": 6
+          "picco": 3
         }
       ]
     },
@@ -462,29 +439,6 @@
       ]
     },
     {
-      "id": "funghi",
-      "nome": "Funghi porcini",
-      "emoji": "🍄",
-      "categoria": "verdura",
-      "frase_inizio": "Porcini{luogo}: se piove e poi torna il sole, è la settimana giusta.",
-      "frase_picco": "Porcini al picco{luogo}: gambo sodo e cappello asciutto, mai molli.",
-      "nutriente_eroe": "selenio",
-      "stagione": [
-        {
-          "area": "nord_italia",
-          "mese_inizio": 9,
-          "mese_fine": 9,
-          "picco": 9
-        },
-        {
-          "area": "liguria",
-          "mese_inizio": 9,
-          "mese_fine": 9,
-          "picco": 9
-        }
-      ]
-    },
-    {
       "id": "insalata",
       "nome": "Insalata",
       "emoji": "🥬",
@@ -495,14 +449,14 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 6,
-          "mese_fine": 8,
-          "picco": 6
+          "mese_inizio": 1,
+          "mese_fine": 12,
+          "picco": 8
         },
         {
           "area": "liguria",
-          "mese_inizio": 6,
-          "mese_fine": 8,
+          "mese_inizio": 1,
+          "mese_fine": 12,
           "picco": 6
         }
       ]
@@ -519,13 +473,13 @@
         {
           "area": "nord_italia",
           "mese_inizio": 4,
-          "mese_fine": 6,
+          "mese_fine": 5,
           "picco": 4
         },
         {
           "area": "liguria",
           "mese_inizio": 4,
-          "mese_fine": 6,
+          "mese_fine": 5,
           "picco": 4
         }
       ]
@@ -542,13 +496,13 @@
         {
           "area": "nord_italia",
           "mese_inizio": 9,
-          "mese_fine": 10,
+          "mese_fine": 12,
           "picco": 9
         },
         {
           "area": "liguria",
           "mese_inizio": 9,
-          "mese_fine": 10,
+          "mese_fine": 12,
           "picco": 9
         }
       ]
@@ -588,7 +542,7 @@
         {
           "area": "nord_italia",
           "mese_inizio": 1,
-          "mese_fine": 4,
+          "mese_fine": 2,
           "picco": 1
         },
         {
@@ -610,15 +564,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 4,
-          "mese_fine": 6,
-          "picco": 4
+          "mese_inizio": 1,
+          "mese_fine": 12,
+          "picco": 9
         },
         {
           "area": "liguria",
-          "mese_inizio": 4,
-          "mese_fine": 6,
-          "picco": 5
+          "mese_inizio": 1,
+          "mese_fine": 12,
+          "picco": 9
         }
       ]
     },
@@ -633,15 +587,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 3,
-          "mese_fine": 4,
-          "picco": 3
+          "mese_inizio": 8,
+          "mese_fine": 12,
+          "picco": 11
         },
         {
           "area": "liguria",
-          "mese_inizio": 3,
-          "mese_fine": 4,
-          "picco": 3
+          "mese_inizio": 8,
+          "mese_fine": 12,
+          "picco": 11
         }
       ]
     },
@@ -680,13 +634,13 @@
         {
           "area": "nord_italia",
           "mese_inizio": 5,
-          "mese_fine": 7,
-          "picco": 7
+          "mese_fine": 9,
+          "picco": 6
         },
         {
           "area": "liguria",
           "mese_inizio": 5,
-          "mese_fine": 7,
+          "mese_fine": 9,
           "picco": 7
         }
       ]
@@ -702,15 +656,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 9,
+          "mese_inizio": 5,
           "mese_fine": 9,
-          "picco": 9
+          "picco": 7
         },
         {
           "area": "liguria",
-          "mese_inizio": 9,
+          "mese_inizio": 7,
           "mese_fine": 9,
-          "picco": 9
+          "picco": 7
         }
       ]
     },
@@ -726,13 +680,13 @@
         {
           "area": "nord_italia",
           "mese_inizio": 5,
-          "mese_fine": 7,
-          "picco": 5
+          "mese_fine": 9,
+          "picco": 6
         },
         {
           "area": "liguria",
           "mese_inizio": 6,
-          "mese_fine": 7,
+          "mese_fine": 9,
           "picco": 6
         }
       ]
@@ -748,15 +702,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 6,
-          "mese_fine": 8,
+          "mese_inizio": 1,
+          "mese_fine": 12,
           "picco": 7
         },
         {
           "area": "liguria",
-          "mese_inizio": 6,
-          "mese_fine": 8,
-          "picco": 7
+          "mese_inizio": 1,
+          "mese_fine": 12,
+          "picco": 12
         }
       ]
     },
@@ -771,15 +725,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 2,
-          "mese_fine": 3,
-          "picco": 2
+          "mese_inizio": 8,
+          "mese_fine": 11,
+          "picco": 11
         },
         {
           "area": "liguria",
-          "mese_inizio": 2,
-          "mese_fine": 3,
-          "picco": 2
+          "mese_inizio": 8,
+          "mese_fine": 11,
+          "picco": 11
         }
       ]
     },
@@ -794,15 +748,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 9,
+          "mese_inizio": 7,
           "mese_fine": 9,
-          "picco": 9
+          "picco": 7
         },
         {
           "area": "liguria",
-          "mese_inizio": 9,
+          "mese_inizio": 7,
           "mese_fine": 9,
-          "picco": 9
+          "picco": 7
         }
       ]
     },
@@ -817,14 +771,14 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 7,
-          "mese_fine": 9,
-          "picco": 7
+          "mese_inizio": 1,
+          "mese_fine": 12,
+          "picco": 8
         },
         {
           "area": "liguria",
-          "mese_inizio": 7,
-          "mese_fine": 9,
+          "mese_inizio": 1,
+          "mese_fine": 12,
           "picco": 8
         }
       ]
@@ -840,15 +794,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 9,
-          "mese_fine": 9,
-          "picco": 9
+          "mese_inizio": 12,
+          "mese_fine": 2,
+          "picco": 12
         },
         {
           "area": "liguria",
-          "mese_inizio": 9,
-          "mese_fine": 9,
-          "picco": 9
+          "mese_inizio": 12,
+          "mese_fine": 2,
+          "picco": 12
         }
       ]
     },
@@ -864,14 +818,14 @@
         {
           "area": "nord_italia",
           "mese_inizio": 2,
-          "mese_fine": 3,
-          "picco": 2
+          "mese_fine": 11,
+          "picco": 3
         },
         {
           "area": "liguria",
           "mese_inizio": 2,
-          "mese_fine": 3,
-          "picco": 2
+          "mese_fine": 11,
+          "picco": 3
         }
       ]
     },
@@ -886,15 +840,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 12,
-          "mese_fine": 1,
-          "picco": 12
+          "mese_inizio": 10,
+          "mese_fine": 3,
+          "picco": 3
         },
         {
           "area": "liguria",
-          "mese_inizio": 12,
-          "mese_fine": 1,
-          "picco": 12
+          "mese_inizio": 10,
+          "mese_fine": 3,
+          "picco": 3
         }
       ]
     },
@@ -932,15 +886,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 2,
-          "mese_fine": 2,
-          "picco": 2
+          "mese_inizio": 10,
+          "mese_fine": 4,
+          "picco": 12
         },
         {
           "area": "liguria",
-          "mese_inizio": 2,
-          "mese_fine": 2,
-          "picco": 2
+          "mese_inizio": 10,
+          "mese_fine": 4,
+          "picco": 12
         }
       ]
     },
@@ -955,14 +909,14 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 8,
-          "mese_fine": 8,
+          "mese_inizio": 6,
+          "mese_fine": 10,
           "picco": 8
         },
         {
           "area": "liguria",
-          "mese_inizio": 8,
-          "mese_fine": 8,
+          "mese_inizio": 6,
+          "mese_fine": 10,
           "picco": 8
         }
       ]
@@ -1001,15 +955,15 @@
       "stagione": [
         {
           "area": "nord_italia",
-          "mese_inizio": 9,
-          "mese_fine": 9,
-          "picco": 9
+          "mese_inizio": 12,
+          "mese_fine": 2,
+          "picco": 12
         },
         {
           "area": "liguria",
-          "mese_inizio": 9,
-          "mese_fine": 9,
-          "picco": 9
+          "mese_inizio": 12,
+          "mese_fine": 2,
+          "picco": 12
         }
       ]
     },
@@ -1025,14 +979,14 @@
         {
           "area": "nord_italia",
           "mese_inizio": 7,
-          "mese_fine": 8,
-          "picco": 8
+          "mese_fine": 11,
+          "picco": 10
         },
         {
           "area": "liguria",
-          "mese_inizio": 7,
-          "mese_fine": 8,
-          "picco": 8
+          "mese_inizio": 8,
+          "mese_fine": 11,
+          "picco": 10
         }
       ]
     },
@@ -1055,7 +1009,7 @@
           "area": "liguria",
           "mese_inizio": 4,
           "mese_fine": 5,
-          "picco": 4
+          "picco": 5
         }
       ]
     }
