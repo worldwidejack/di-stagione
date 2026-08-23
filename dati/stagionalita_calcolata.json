@@ -1,0 +1,1063 @@
+{
+  "_nota": "PROPOSTA calcolata da calibra.py sui listini di Milano e Genova. Non e' il file usato dal sito.",
+  "prodotti": [
+    {
+      "id": "aglio",
+      "nome": "Aglio",
+      "emoji": "🧄",
+      "categoria": "verdura",
+      "frase_inizio": "Aglio nuovo{luogo} — quello fresco è dolce, niente a che vedere col secco.",
+      "frase_picco": "Aglio al picco{luogo}: se trovi quello di Vessalico, prendilo.",
+      "nutriente_eroe": "allicina",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 10,
+          "mese_fine": 10,
+          "picco": 10
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 12,
+          "mese_fine": 1,
+          "picco": 12
+        }
+      ]
+    },
+    {
+      "id": "albicocche",
+      "nome": "Albicocche",
+      "emoji": "🟠",
+      "categoria": "frutta",
+      "frase_inizio": "Albicocche{luogo} — quelle dure non maturano più, sceglile morbide.",
+      "frase_picco": "Albicocche al picco{luogo}: mese buono anche per farne marmellata.",
+      "nutriente_eroe": "beta-carotene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 5,
+          "mese_fine": 5,
+          "picco": 5
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 7,
+          "mese_fine": 7,
+          "picco": 7
+        }
+      ]
+    },
+    {
+      "id": "angurie",
+      "nome": "Angurie",
+      "emoji": "🍉",
+      "categoria": "frutta",
+      "frase_inizio": "Angurie{luogo} — ufficialmente è estate.",
+      "frase_picco": "Angurie al picco{luogo}: la macchia gialla sotto vuol dire che è matura.",
+      "nutriente_eroe": "licopene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "arance",
+      "nome": "Arance",
+      "emoji": "🍊",
+      "categoria": "frutta",
+      "frase_inizio": "Arance{luogo}: comincia la stagione, da qui a primavera ci sono sempre.",
+      "frase_picco": "Arance al picco{luogo}: mese migliore, soprattutto per le rosse.",
+      "nutriente_eroe": "vitamina C",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "asparagi",
+      "nome": "Asparagi",
+      "emoji": "🌱",
+      "categoria": "verdura",
+      "frase_inizio": "Asparagi{luogo} — stagione corta, non aspettare troppo.",
+      "frase_picco": "Asparagi al picco{luogo}: punta chiusa e gambo che si spezza netto.",
+      "nutriente_eroe": "folati",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 2,
+          "mese_fine": 2,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 2,
+          "mese_fine": 2,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "basilico",
+      "nome": "Basilico",
+      "emoji": "🌿",
+      "categoria": "verdura",
+      "frase_inizio": "Basilico{luogo} — quello di Prà non si discute.",
+      "frase_picco": "Basilico al picco{luogo}: foglia piccola, pesto vero.",
+      "nutriente_eroe": "acido rosmarinico",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 12,
+          "mese_fine": 1,
+          "picco": 12
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 12,
+          "mese_fine": 1,
+          "picco": 12
+        }
+      ]
+    },
+    {
+      "id": "bietole",
+      "nome": "Bietole e coste",
+      "emoji": "🥬",
+      "categoria": "verdura",
+      "frase_inizio": "Bietole{luogo} — costa bianca e soda, foglia verde scuro.",
+      "frase_picco": "Bietole al picco{luogo}: mese buono, ne fai torta salata per giorni.",
+      "nutriente_eroe": "ferro",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 7,
+          "mese_fine": 10,
+          "picco": 7
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 7,
+          "mese_fine": 10,
+          "picco": 7
+        }
+      ]
+    },
+    {
+      "id": "broccoli",
+      "nome": "Broccoli",
+      "emoji": "🥦",
+      "categoria": "verdura",
+      "frase_inizio": "Broccoli{luogo}: comincia la stagione, cimette chiuse e verde scuro.",
+      "frase_picco": "Broccoli al picco{luogo}: mese migliore, se ingialliscono sono vecchi.",
+      "nutriente_eroe": "sulforafano",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 1,
+          "picco": 10
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 10,
+          "mese_fine": 1,
+          "picco": 10
+        }
+      ]
+    },
+    {
+      "id": "cachi",
+      "nome": "Cachi",
+      "emoji": "🟠",
+      "categoria": "frutta",
+      "frase_inizio": "Cachi{luogo}: quelli duri si aspettano, quelli molli si mangiano col cucchiaio.",
+      "frase_picco": "Cachi al picco{luogo}: è il mese loro, dopo diventano acquosi.",
+      "nutriente_eroe": "beta-carotene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 11,
+          "mese_fine": 11,
+          "picco": 11
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 11,
+          "mese_fine": 11,
+          "picco": 11
+        }
+      ]
+    },
+    {
+      "id": "carciofi",
+      "nome": "Carciofi",
+      "emoji": "🌿",
+      "categoria": "verdura",
+      "frase_inizio": "Carciofi{luogo}: comincia la stagione, i primi sono i più teneri.",
+      "frase_picco": "Carciofi al picco{luogo}: quello violetto di Albenga si mangia anche crudo.",
+      "nutriente_eroe": "cinarina",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 11,
+          "mese_fine": 4,
+          "picco": 3
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 11,
+          "mese_fine": 4,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "carote",
+      "nome": "Carote",
+      "emoji": "🥕",
+      "categoria": "verdura",
+      "frase_inizio": "Carote di campo{luogo}: sode, col ciuffo ancora verde.",
+      "frase_picco": "Carote al picco{luogo}: mese loro, dolci senza esagerare.",
+      "nutriente_eroe": "beta-carotene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 4,
+          "mese_fine": 6,
+          "picco": 4
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 4,
+          "mese_fine": 6,
+          "picco": 4
+        }
+      ]
+    },
+    {
+      "id": "castagne",
+      "nome": "Castagne",
+      "emoji": "🌰",
+      "categoria": "frutta",
+      "frase_inizio": "Castagne{luogo}: comincia la stagione, le prime sono piccole.",
+      "frase_picco": "Castagne al picco{luogo}: mese buono, quelle grosse valgono la spesa.",
+      "nutriente_eroe": "manganese",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 10,
+          "mese_fine": 10,
+          "picco": 10
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 10,
+          "mese_fine": 10,
+          "picco": 10
+        }
+      ]
+    },
+    {
+      "id": "cavolfiore",
+      "nome": "Cavolfiore",
+      "emoji": "⚪",
+      "categoria": "verdura",
+      "frase_inizio": "Cavolfiori{luogo} — testa compatta e foglie ancora attaccate.",
+      "frase_picco": "Cavolfiore al picco{luogo}: mese suo, bianco senza macchie marroni.",
+      "nutriente_eroe": "sulforafano",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 11,
+          "mese_fine": 2,
+          "picco": 11
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 11,
+          "mese_fine": 2,
+          "picco": 1
+        }
+      ]
+    },
+    {
+      "id": "cetrioli",
+      "nome": "Cetrioli",
+      "emoji": "🥒",
+      "categoria": "verdura",
+      "frase_inizio": "Cetrioli{luogo} — i piccoli hanno meno semi.",
+      "frase_picco": "Cetrioli al picco{luogo}: sodi da un capo all'altro, senza parti molli.",
+      "nutriente_eroe": "silice",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 12,
+          "mese_fine": 2,
+          "picco": 12
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 12,
+          "mese_fine": 2,
+          "picco": 12
+        }
+      ]
+    },
+    {
+      "id": "ciliegie",
+      "nome": "Ciliegie",
+      "emoji": "🍒",
+      "categoria": "frutta",
+      "frase_inizio": "Ciliegie{luogo}: comincia la stagione, dura poco.",
+      "frase_picco": "Ciliegie al picco{luogo}: adesso o si aspetta un anno.",
+      "nutriente_eroe": "antociani",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "cipolle",
+      "nome": "Cipolle",
+      "emoji": "🧅",
+      "categoria": "verdura",
+      "frase_inizio": "Cipolle nuove{luogo}: sode, senza germogli, buccia asciutta.",
+      "frase_picco": "Cipolle al picco{luogo}: mese giusto per farne scorta, durano mesi.",
+      "nutriente_eroe": "quercetina",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 3
+        }
+      ]
+    },
+    {
+      "id": "fagiolini",
+      "nome": "Fagiolini",
+      "emoji": "🫛",
+      "categoria": "verdura",
+      "frase_inizio": "Fagiolini{luogo}: i primi sono i più fini.",
+      "frase_picco": "Fagiolini al picco{luogo}: devono spezzarsi netti, se piegano sono vecchi.",
+      "nutriente_eroe": "fibra",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 12,
+          "mese_fine": 1,
+          "picco": 12
+        }
+      ]
+    },
+    {
+      "id": "fichi",
+      "nome": "Fichi",
+      "emoji": "🟣",
+      "categoria": "frutta",
+      "frase_inizio": "Da oggi i fichi entrano in stagione{luogo} — i primi sono i più dolci.",
+      "frase_picco": "Fichi al picco{luogo}: si mangiano appena colti, non aspettano.",
+      "nutriente_eroe": "potassio",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "finocchi",
+      "nome": "Finocchi",
+      "emoji": "🥬",
+      "categoria": "verdura",
+      "frase_inizio": "Finocchi{luogo} — bianchi, sodi, senza parti filacciose.",
+      "frase_picco": "Finocchi al picco{luogo}: mese loro, croccanti come devono essere.",
+      "nutriente_eroe": "anetolo",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
+        }
+      ]
+    },
+    {
+      "id": "fragole",
+      "nome": "Fragole",
+      "emoji": "🍓",
+      "categoria": "frutta",
+      "frase_inizio": "Arrivano le fragole{luogo} — le prime sono piccole e sanno di più.",
+      "frase_picco": "Fragole al picco{luogo}: se profumano dal banco sono quelle giuste.",
+      "nutriente_eroe": "vitamina C",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 2,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 2,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "funghi",
+      "nome": "Funghi porcini",
+      "emoji": "🍄",
+      "categoria": "verdura",
+      "frase_inizio": "Porcini{luogo}: se piove e poi torna il sole, è la settimana giusta.",
+      "frase_picco": "Porcini al picco{luogo}: gambo sodo e cappello asciutto, mai molli.",
+      "nutriente_eroe": "selenio",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        }
+      ]
+    },
+    {
+      "id": "insalata",
+      "nome": "Insalata",
+      "emoji": "🥬",
+      "categoria": "verdura",
+      "frase_inizio": "Insalate di campo{luogo}: da adesso sono locali, non di serra.",
+      "frase_picco": "Insalata al picco{luogo}: cespo pesante e foglie che non si afflosciano.",
+      "nutriente_eroe": "folati",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
+        }
+      ]
+    },
+    {
+      "id": "kiwi",
+      "nome": "Kiwi",
+      "emoji": "🥝",
+      "categoria": "frutta",
+      "frase_inizio": "Kiwi{luogo}: comincia la stagione italiana, dura fino a primavera.",
+      "frase_picco": "Kiwi al picco{luogo}: si comprano duri, maturano in fruttiera.",
+      "nutriente_eroe": "vitamina C",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 4,
+          "mese_fine": 6,
+          "picco": 4
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 4,
+          "mese_fine": 6,
+          "picco": 4
+        }
+      ]
+    },
+    {
+      "id": "lamponi",
+      "nome": "Lamponi",
+      "emoji": "🔴",
+      "categoria": "frutta",
+      "frase_inizio": "Lamponi{luogo}: durano due giorni, comprane pochi e mangiali subito.",
+      "frase_picco": "Lamponi al picco{luogo}: è il mese in cui costano meno.",
+      "nutriente_eroe": "antociani",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 10,
+          "picco": 9
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 10,
+          "picco": 9
+        }
+      ]
+    },
+    {
+      "id": "limoni",
+      "nome": "Limoni",
+      "emoji": "🍋",
+      "categoria": "frutta",
+      "frase_inizio": "Limoni{luogo} — quelli con la buccia spessa e ruvida sono di qui.",
+      "frase_picco": "Limoni al picco{luogo}: mese giusto, buccia compresa.",
+      "nutriente_eroe": "limonene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 1,
+          "mese_fine": 2,
+          "picco": 1
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 1,
+          "mese_fine": 2,
+          "picco": 1
+        }
+      ]
+    },
+    {
+      "id": "mandarini",
+      "nome": "Mandarini",
+      "emoji": "🍊",
+      "categoria": "frutta",
+      "frase_inizio": "Mandarini{luogo} — arrivano i primi, ancora un po' aspri.",
+      "frase_picco": "Mandarini al picco{luogo}: mese loro, quelli con la foglia sono appena colti.",
+      "nutriente_eroe": "vitamina C",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 1,
+          "mese_fine": 4,
+          "picco": 1
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 1,
+          "mese_fine": 4,
+          "picco": 1
+        }
+      ]
+    },
+    {
+      "id": "melanzane",
+      "nome": "Melanzane",
+      "emoji": "🍆",
+      "categoria": "verdura",
+      "frase_inizio": "Melanzane{luogo} — le più sode sono quelle pesanti per la loro taglia.",
+      "frase_picco": "Melanzane al picco{luogo}: mese giusto per farne una teglia grossa.",
+      "nutriente_eroe": "antociani",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 4,
+          "mese_fine": 6,
+          "picco": 4
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 4,
+          "mese_fine": 6,
+          "picco": 5
+        }
+      ]
+    },
+    {
+      "id": "mele",
+      "nome": "Mele",
+      "emoji": "🍎",
+      "categoria": "frutta",
+      "frase_inizio": "Mele nuove{luogo} — da qui in avanti ci sono fino a primavera.",
+      "frase_picco": "Mele al picco{luogo}: raccolte adesso, sode e croccanti.",
+      "nutriente_eroe": "quercetina",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 3,
+          "mese_fine": 4,
+          "picco": 3
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 3,
+          "mese_fine": 4,
+          "picco": 3
+        }
+      ]
+    },
+    {
+      "id": "melograno",
+      "nome": "Melograno",
+      "emoji": "🔴",
+      "categoria": "frutta",
+      "frase_inizio": "Melograni{luogo} — pesante vuol dire pieno.",
+      "frase_picco": "Melograno al picco{luogo}: la buccia opaca e tesa è quella giusta.",
+      "nutriente_eroe": "punicalagine",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 11,
+          "mese_fine": 11,
+          "picco": 11
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 11,
+          "mese_fine": 11,
+          "picco": 11
+        }
+      ]
+    },
+    {
+      "id": "meloni",
+      "nome": "Meloni",
+      "emoji": "🍈",
+      "categoria": "frutta",
+      "frase_inizio": "Meloni{luogo}: da adesso in poi vale la pena.",
+      "frase_picco": "Meloni al picco{luogo}: pesante per la sua taglia e profumato al picciolo.",
+      "nutriente_eroe": "beta-carotene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 5,
+          "mese_fine": 7,
+          "picco": 7
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 5,
+          "mese_fine": 7,
+          "picco": 7
+        }
+      ]
+    },
+    {
+      "id": "mirtilli",
+      "nome": "Mirtilli",
+      "emoji": "🔵",
+      "categoria": "frutta",
+      "frase_inizio": "Mirtilli{luogo} — quelli con la patina bianca sono i più freschi.",
+      "frase_picco": "Mirtilli al picco{luogo}: mese giusto per farne scorta e congelarne un po'.",
+      "nutriente_eroe": "antociani",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "nome": "More",
+      "emoji": "🫐",
+      "categoria": "frutta",
+      "frase_inizio": "More{luogo} — se hai un rovo vicino casa, è il momento di guardarlo.",
+      "frase_picco": "More al picco{luogo}: le più nere sono le più dolci, le rossastre no.",
+      "nutriente_eroe": "antociani",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 5,
+          "mese_fine": 7,
+          "picco": 5
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 6,
+          "mese_fine": 7,
+          "picco": 6
+        }
+      ]
+    },
+    {
+      "id": "peperoni",
+      "nome": "Peperoni",
+      "emoji": "🫑",
+      "categoria": "verdura",
+      "frase_inizio": "Peperoni{luogo}: arrivano i primi, ancora sottili.",
+      "frase_picco": "Peperoni al picco{luogo}: carnosi e lucidi, quelli opachi sono vecchi.",
+      "nutriente_eroe": "vitamina C",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 7
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 7
+        }
+      ]
+    },
+    {
+      "id": "pere",
+      "nome": "Pere",
+      "emoji": "🍐",
+      "categoria": "frutta",
+      "frase_inizio": "Pere{luogo}: comincia la stagione, le prime sono le più sugose.",
+      "frase_picco": "Pere al picco{luogo}: si comprano dure e si aspettano due giorni.",
+      "nutriente_eroe": "fibra",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "pesche",
+      "nome": "Pesche",
+      "emoji": "🍑",
+      "categoria": "frutta",
+      "frase_inizio": "Arrivano le pesche{luogo} — le prime sono acerbe, tra una settimana si ragiona.",
+      "frase_picco": "Pesche al picco{luogo}: quelle che profumano da lontano sono quelle giuste.",
+      "nutriente_eroe": "beta-carotene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        }
+      ]
+    },
+    {
+      "id": "pomodori",
+      "nome": "Pomodori",
+      "emoji": "🍅",
+      "categoria": "verdura",
+      "frase_inizio": "Pomodori{luogo} — da qui a settembre non serve comprarli altrove.",
+      "frase_picco": "Pomodori al picco{luogo}: se ne fai conserva, è adesso.",
+      "nutriente_eroe": "licopene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 7,
+          "mese_fine": 9,
+          "picco": 7
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 7,
+          "mese_fine": 9,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "porri",
+      "nome": "Porri",
+      "emoji": "🧅",
+      "categoria": "verdura",
+      "frase_inizio": "Porri{luogo}: comincia la stagione, il bianco lungo è la parte buona.",
+      "frase_picco": "Porri al picco{luogo}: mese loro, sodi e senza parte centrale legnosa.",
+      "nutriente_eroe": "kaempferolo",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        }
+      ]
+    },
+    {
+      "id": "radicchio",
+      "nome": "Radicchio",
+      "emoji": "🟣",
+      "categoria": "verdura",
+      "frase_inizio": "Radicchio{luogo}: comincia la stagione, l'amaro fa parte del gioco.",
+      "frase_picco": "Radicchio al picco{luogo}: dopo le prime gelate è più dolce, non meno.",
+      "nutriente_eroe": "antociani",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 2,
+          "mese_fine": 3,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "rucola",
+      "nome": "Rucola",
+      "emoji": "🍃",
+      "categoria": "verdura",
+      "frase_inizio": "Rucola{luogo}: da adesso è di campo e pizzica sul serio.",
+      "frase_picco": "Rucola al picco{luogo}: foglia piccola e stretta, non quella larga da serra.",
+      "nutriente_eroe": "nitrati",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 12,
+          "mese_fine": 1,
+          "picco": 12
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 12,
+          "mese_fine": 1,
+          "picco": 12
+        }
+      ]
+    },
+    {
+      "id": "sedano",
+      "nome": "Sedano",
+      "emoji": "🥬",
+      "categoria": "verdura",
+      "frase_inizio": "Sedano{luogo} — coste spesse che si spezzano con un rumore secco.",
+      "frase_picco": "Sedano al picco{luogo}: mese buono, è la base di metà delle cose che cucini.",
+      "nutriente_eroe": "apigenina",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 6,
+          "mese_fine": 8,
+          "picco": 6
+        }
+      ]
+    },
+    {
+      "id": "spinaci",
+      "nome": "Spinaci",
+      "emoji": "🥬",
+      "categoria": "verdura",
+      "frase_inizio": "Spinaci{luogo} — quelli d'inverno hanno la foglia più spessa e più sapore.",
+      "frase_picco": "Spinaci al picco{luogo}: foglia scura e soda, mai gialla sui bordi.",
+      "nutriente_eroe": "ferro",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 2,
+          "mese_fine": 2,
+          "picco": 2
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 2,
+          "mese_fine": 2,
+          "picco": 2
+        }
+      ]
+    },
+    {
+      "id": "susine",
+      "nome": "Susine",
+      "emoji": "🟪",
+      "categoria": "frutta",
+      "frase_inizio": "Susine{luogo}: comincia la stagione delle prugne fresche.",
+      "frase_picco": "Susine al picco{luogo}: quelle con la pruina intatta non sono state maneggiate.",
+      "nutriente_eroe": "sorbitolo",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 8,
+          "mese_fine": 8,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "uva",
+      "nome": "Uva",
+      "emoji": "🍇",
+      "categoria": "frutta",
+      "frase_inizio": "L'uva entra in stagione{luogo} — comincia la parte buona dell'estate.",
+      "frase_picco": "Uva al picco{luogo}: è il mese in cui costa meno e sa di più.",
+      "nutriente_eroe": "resveratrolo",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 7,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 7,
+          "mese_fine": 8,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "verza",
+      "nome": "Verza",
+      "emoji": "🥬",
+      "categoria": "verdura",
+      "frase_inizio": "Verza{luogo}: comincia la stagione delle minestre serie.",
+      "frase_picco": "Verza al picco{luogo}: dopo il freddo è più tenera, foglia bollosa e soda.",
+      "nutriente_eroe": "vitamina K",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 9,
+          "mese_fine": 9,
+          "picco": 9
+        }
+      ]
+    },
+    {
+      "id": "zucca",
+      "nome": "Zucca",
+      "emoji": "🎃",
+      "categoria": "verdura",
+      "frase_inizio": "La zucca entra in stagione{luogo} — ufficialmente non è più estate.",
+      "frase_picco": "Zucca al picco{luogo}: quella con la buccia dura è quella che sa di qualcosa.",
+      "nutriente_eroe": "beta-carotene",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 7,
+          "mese_fine": 8,
+          "picco": 8
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 7,
+          "mese_fine": 8,
+          "picco": 8
+        }
+      ]
+    },
+    {
+      "id": "zucchine",
+      "nome": "Zucchine",
+      "emoji": "🥒",
+      "categoria": "verdura",
+      "frase_inizio": "Zucchine{luogo} — piccole e sode, le grosse sono acqua.",
+      "frase_picco": "Zucchine al picco{luogo}: costano niente e ci fai metà dei pranzi.",
+      "nutriente_eroe": "luteina",
+      "stagione": [
+        {
+          "area": "nord_italia",
+          "mese_inizio": 4,
+          "mese_fine": 5,
+          "picco": 5
+        },
+        {
+          "area": "liguria",
+          "mese_inizio": 4,
+          "mese_fine": 5,
+          "picco": 4
+        }
+      ]
+    }
+  ]
+}
