@@ -2,7 +2,7 @@
 
 Anni analizzati: [2021, 2022, 2023, 2024, 2025, 2026] — soglia: 35% dei listini.
 
-Listini campionati: 503.
+Listini campionati: 505.
 
 La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre, 
 `▓` spesso, `░` raramente, `·` mai (con origine italiana).
@@ -25,7 +25,7 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 | Cavolfiore | `█▓·······░██` | 11–2 (picco 12) | 10–3 (picco 12) | ⚠ |
 | Cetrioli | `██··██··██·█` | 9–2 (picco 12) | 6–9 (picco 7) | ⚠ |
 | Ciliegie | `·····▓·▓····` | 6–8 (picco 6) | 5–7 (picco 6) | ⚠ |
-| Cipolle | `·░░··▓·█··▓░` | 6–8 (picco 6) | 6–9 (picco 7) | ⚠ |
+| Cipolle | `·░░··▓·▓··▓░` | 6–8 (picco 6) | 6–9 (picco 7) | ⚠ |
 | Fagiolini | `░···█··█···█` | 8–8 (picco 8) | 6–9 (picco 7) | ⚠ |
 | Fichi | `·····▓·▓····` | 6–8 (picco 8) | 7–9 (picco 8) | ⚠ |
 | Finocchi | `░░██░███░░██` | 3–8 (picco 3) | 10–4 (picco 12) | ⚠ |
@@ -36,7 +36,7 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 | Limoni | `██░░██···▓░·` | 1–2 (picco 1) | — |  |
 | Mandarini | `██░░·····░░·` | 1–2 (picco 1) | 11–2 (picco 12) | ⚠ |
 | Melanzane | `██·███·██░█·` | 1–12 (picco 9) | 7–9 (picco 8) | ⚠ |
-| Mele | `░░▓▓░░░██░██` | 8–12 (picco 11) | 8–4 (picco 10) | ⚠ |
+| Mele | `░░▓▓░░░▓█░██` | 8–12 (picco 11) | 8–4 (picco 10) | ⚠ |
 | Melograno | `·········░█·` | 11–11 (picco 11) | 10–12 (picco 11) | ⚠ |
 | Meloni | `···░███░█░░·` | 5–9 (picco 6) | 6–9 (picco 7) | ⚠ |
 | Mirtilli | `····▓░█·█···` | 5–9 (picco 7) | 6–8 (picco 7) | ⚠ |
@@ -66,7 +66,7 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 | Arance | `░██·░▓░···░█` | 12–3 (picco 12) | 12–4 (picco 1) | ⚠ |
 | Asparagi | `·▓░█░░······` | 2–4 (picco 4) | 3–5 (picco 4) | ⚠ |
 | Basilico | `█··█·▓·█·█·█` | 4–1 (picco 12) | 5–9 (picco 7) | ⚠ |
-| Bietole e coste | `█·██··████·█` | 7–4 (picco 4) | 3–11 (picco 5) | ⚠ |
+| Bietole e coste | `█·██··████·█` | 7–4 (picco 8) | 3–11 (picco 5) | ⚠ |
 | Broccoli | `█░░█░▓··░███` | 10–1 (picco 10) | 10–3 (picco 1) | ⚠ |
 | Cachi | `········░·█·` | 11–11 (picco 11) | 10–12 (picco 11) | ⚠ |
 | Carciofi | `███▓░····░██` | 11–4 (picco 1) | 2–5 (picco 4) | ⚠ |
@@ -109,4 +109,4 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 
 Se qualcuna vi interessa, si aggiunge a `SPECIE_A_ID` in `calibra.py`.
 
-INDIVIE (799), POMPELMI (483), RIBES (454), CICORIA (369), CAVOLI CAPPUCCI (367), FUNGHI (365), FICHI D'INDIA (198), RAVANELLI (178), CIPOLLOTTI (173), FAGIOLI (154), CAVOLI NERI (78), NESPOLE GIAPPONESI (49), BATATE (39), CIME DI RAPA (38), SALVIA (38), CAVOLI BRUXELLES (37), AGLI FRESCHI (33), TOPINAMBUR (31), NOCI FRESCHE (28), FIORI DI ZUCCA (24), PEPERONCINI (23), CARDI (20), ACTINIDIA (16), CICORIA WITLOOF (12), CAVOLI CINESI (4), COTOGNE (3), POMELI (2)
+INDIVIE (799), POMPELMI (483), RIBES (455), CICORIA (369), CAVOLI CAPPUCCI (367), FUNGHI (365), FICHI D'INDIA (207), RAVANELLI (178), CIPOLLOTTI (173), FAGIOLI (154), CAVOLI NERI (78), NESPOLE GIAPPONESI (49), BATATE (39), CIME DI RAPA (38), SALVIA (38), CAVOLI BRUXELLES (37), AGLI FRESCHI (33), TOPINAMBUR (31), NOCI FRESCHE (28), FIORI DI ZUCCA (24), PEPERONCINI (23), CARDI (20), ACTINIDIA (16), CICORIA WITLOOF (12), CAVOLI CINESI (4), COTOGNE (3), POMELI (2)
