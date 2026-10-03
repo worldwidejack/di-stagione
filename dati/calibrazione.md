@@ -2,7 +2,7 @@
 
 Anni analizzati: [2021, 2022, 2023, 2024, 2025, 2026] — soglia: 35% dei listini.
 
-Listini campionati: 505.
+Listini campionati: 511.
 
 La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre, 
 `▓` spesso, `░` raramente, `·` mai (con origine italiana).
@@ -33,7 +33,7 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 | Insalata | `█░██░███░██·` | 1–12 (picco 8) | 4–10 (picco 6) | ⚠ |
 | Kiwi | `█··██░···░··` | 4–5 (picco 4) | 10–4 (picco 11) | ⚠ |
 | Lamponi | `░░··██··█▓·▓` | 9–12 (picco 9) | 6–9 (picco 7) | ⚠ |
-| Limoni | `██░░██···▓░·` | 1–2 (picco 1) | — |  |
+| Limoni | `██░░██··░▓░·` | 1–2 (picco 1) | — |  |
 | Mandarini | `██░░·····░░·` | 1–2 (picco 1) | 11–2 (picco 12) | ⚠ |
 | Melanzane | `██·███·██░█·` | 1–12 (picco 9) | 7–9 (picco 8) | ⚠ |
 | Mele | `░░▓▓░░░▓█░██` | 8–12 (picco 11) | 8–4 (picco 10) | ⚠ |
@@ -72,7 +72,7 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 | Carciofi | `███▓░····░██` | 11–4 (picco 1) | 2–5 (picco 4) | ⚠ |
 | Carote | `█··███·██··█` | 4–9 (picco 4) | 6–11 (picco 9) | ⚠ |
 | Cavolfiore | `██········██` | 11–2 (picco 12) | 10–3 (picco 12) | ⚠ |
-| Cetrioli | `██··██··██·█` | 9–2 (picco 12) | 5–9 (picco 7) | ⚠ |
+| Cetrioli | `██··██··██·█` | 9–2 (picco 9) | 5–9 (picco 7) | ⚠ |
 | Ciliegie | `·····█·▓····` | 6–8 (picco 6) | 5–6 (picco 5) | ⚠ |
 | Cipolle | `·░▓··▓·▓··▓▓` | 6–8 (picco 6) | 6–9 (picco 7) | ⚠ |
 | Fagiolini | `░···▓··█···█` | 8–8 (picco 8) | 5–9 (picco 7) | ⚠ |
@@ -109,4 +109,4 @@ La barra è l'anno, gennaio→dicembre. `█` quotato quasi sempre,
 
 Se qualcuna vi interessa, si aggiunge a `SPECIE_A_ID` in `calibra.py`.
 
-INDIVIE (799), POMPELMI (483), RIBES (455), CICORIA (369), CAVOLI CAPPUCCI (367), FUNGHI (365), FICHI D'INDIA (207), RAVANELLI (178), CIPOLLOTTI (173), FAGIOLI (154), CAVOLI NERI (78), NESPOLE GIAPPONESI (49), BATATE (39), CIME DI RAPA (38), SALVIA (38), CAVOLI BRUXELLES (37), AGLI FRESCHI (33), TOPINAMBUR (31), NOCI FRESCHE (28), FIORI DI ZUCCA (24), PEPERONCINI (23), CARDI (20), ACTINIDIA (16), CICORIA WITLOOF (12), CAVOLI CINESI (4), COTOGNE (3), POMELI (2)
+INDIVIE (819), POMPELMI (488), RIBES (461), CICORIA (379), CAVOLI CAPPUCCI (367), FUNGHI (365), FICHI D'INDIA (212), RAVANELLI (178), CIPOLLOTTI (178), FAGIOLI (154), CAVOLI NERI (78), NESPOLE GIAPPONESI (49), BATATE (43), CIME DI RAPA (38), SALVIA (38), CAVOLI BRUXELLES (37), AGLI FRESCHI (33), TOPINAMBUR (31), FIORI DI ZUCCA (29), PEPERONCINI (28), NOCI FRESCHE (28), CARDI (20), ACTINIDIA (16), CICORIA WITLOOF (12), CAVOLI CINESI (4), COTOGNE (3), POMELI (2)
